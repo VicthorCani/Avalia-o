@@ -1,50 +1,49 @@
-# Welcome to your Expo app 👋
+1. Como criar um emulador no Android Studio
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+-> Abra o Android Studio.
+-> Vá em Tools > Device Manager.
+-> Clique em Create Device.
+-> Escolha o tipo de dispositivo (por exemplo: Pixel 5) e clique em Next.
+-> Escolha uma imagem do sistema Android (recomendo uma versão recente, como "API 30" ou superior). Clique em Download se ainda não tiver.
+-> Depois de baixar, clique em Next.
+-> Dê um nome ao emulador e ajuste as configurações, se quiser.
+-> Clique em Finish.
+-> Agora você verá seu emulador listado. Clique no ícone de Play (▶) para iniciá-lo.
 
-## Get started
+2. Como habilitar o SDK
 
-1. Install dependencies
+-> No Android Studio, vá em File > Settings (ou Android Studio > Preferences no macOS).
+-> Vá para Appearance & Behavior > System Settings > Android SDK.
+-> Na aba SDK Platforms, certifique-se de que uma versão do Android (ex: Android 11, API 30) está marcada.
+-> Na aba SDK Tools, marque:
+-> Android SDK Build-Tools
+-> Android Emulator
+-> Android SDK Platform-Tools
+-> Intel x86 Emulator Accelerator (HAXM) – se estiver usando Intel
+-> Clique em Apply e depois em OK.
 
-   ```bash
-   npm install
-   ```
+3. Como configurar o ANDROID_HOME e JAVA_HOME nas variáveis de ambiente da sua conta?
 
-2. Start the app
+Acesse o menu Iniciar, pesquise por Variáveis de Ambiente e clique em "Editar variáveis de ambiente do sistema".
+Na janela que abrir, clique em "Variáveis de Ambiente...".
+Em Variáveis de usuário, clique em "Nova..." e preencha da seguinte forma:
+Nome da variável: ANDROID_HOME
+Valor da variável: C:\Users\SeuUsuario\AppData\Local\Android\Sdk
+(substitua "SeuUsuario" pelo seu nome de usuário do Windows)
+Clique novamente em "Nova..." e adicione:
+Nome da variável: JAVA_HOME
+Valor da variável: C:\Program Files\Android\Android Studio\jbr
+Ainda em Variáveis de Ambiente, selecione a variável Path e clique em Editar. Depois, adicione as seguintes entradas:
 
-   ```bash
-   npx expo start
-   ```
+%ANDROID_HOME%\platform-tools
+%ANDROID_HOME%\emulator
+%JAVA_HOME%\bin
 
-In the output, you'll find options to open the app in a
+Clique em OK em todas as janelas para salvar as alterações.
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+4. Como fazer para abrir o projeto no emulador?
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
-```
-
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+Com o projeto aberto no Android Studio, vá até a parte superior da tela e veja o menu de dispositivos.
+Certifique-se de que seu emulador (ex: Pixel 5 API 30) esteja selecionado.
+Clique no ícone Run ou use o atalho Shift + F10.
+O Android Studio irá compilar e abrir seu projeto automaticamente no emulador.
