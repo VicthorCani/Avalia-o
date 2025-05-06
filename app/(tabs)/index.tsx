@@ -21,11 +21,11 @@ export default function HomeScreen() {
         <HelloWave />
       </ThemedView>
       <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">06/05/2025</ThemedText>
+        <ThemedText type="subtitle">DATA: 06/05/2025</ThemedText>
         
       </ThemedView>
       <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">CODIFICAR APLICAÇÕES DISPOSITIVOS MOVEIS </ThemedText>
+        <ThemedText type="subtitle">CODIFICARAPLICAÇÕES DISPOSITIVOS MOVEIS </ThemedText>
       </ThemedView>
     </ParallaxScrollView>
   );
